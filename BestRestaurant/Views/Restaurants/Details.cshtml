@@ -10,6 +10,8 @@
 
 <p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
 
-@*<p>@Html.ActionLink("Back to  Best Restaurant list", "Index")</p> //Restaurant(s)*@
+<p>@Html.ActionLink("Back to  Best Restaurant list", "Index",  "Restaurants")</p> @*//Restaurant(s)*@
+
+<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
 
 <p>@Html.ActionLink("Back to Home", "Home")</p>
