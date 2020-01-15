@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+@using BestRestaurant.Models;
+@model List<BestRestaurant.Models.Restaurant>;
+
+<h1>Restaurant Types</h1>
+
+<ul>
+  @foreach(Restaurant restaurant in Model)
+  {
+      <li>@Html.ActionLink($"{restaurant.CuisineType}", "Details", new { id = restaurant.RestaurantId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new Restaurant", "Create")</p>
+
+@*SELECT * FROM animals ORDER BY type ASC*@

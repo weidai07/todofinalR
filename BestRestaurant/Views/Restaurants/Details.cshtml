@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BestRestaurant.Models.Restaurant
+
+
+<h2>Best Restaurant Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.CuisineType): @Html.DisplayFor(model => model.CuisineType)<h3>
+<p>@Html.ActionLink("Back to  Best Restaurant list", "Index")</p>

@@ -1,0 +1,11 @@
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: blanchedalmond;
+  font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(62, 148, 98);
+}
+
