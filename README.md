@@ -1,7 +1,7 @@
 #Animal Shelter
 
 <h1 align="center">VWAG's Animals!
-  <a href="https://github.com/QuietEvolver/AnimalShelter20">     
+  <a href="https://github.com/QuietEvolver/BestRestaurant20">     
   </a>
 </h1>
 
@@ -14,10 +14,10 @@
   <a href="https://github.blog/category/community/">
     <img src="https://github.blog/wp-content/uploads/2019/01/Community@2x.png" width=100px alt="GH-Community" />
   </a>
-  <a href="https://github.com/arynsh/AnimalShelter20.Solution.git">
+  <a href="https://github.com/quietevolver/BestRestaurant20.Solution.git">
     <img src="https://avatars2.githubusercontent.com/u/55602501?s=460&v=4" width=100px alt="quietevolver" />
   </a>
-  <a href="https://github.com/agolovin/AnimalShelter.Solution.git">
+  <a href="https://github.com/weidai07/todofinalR.Solution.git">
     <img src="https://avatars1.githubusercontent.com/u/53847662?s=400&v=4" width=100px alt="agolovin" />
   </a>
   <a href="https://github.blog/2016-08-22-publish-your-project-documentation-with-github-pages/">
@@ -29,7 +29,7 @@
 
   [Epicodus](https://www.epicodus.com/)
   <span> · </span>
-  [QE's GH](https://github.com/QuietEvolver/AnimalShelter20.Solution.git)
+  [QE's GH](https://github.com/QuietEvolver/BestRestaurant20.Solution.git)
 
 </h3>
 
@@ -69,7 +69,7 @@ List animals starting with the ones who have been in the shelter the longest.
 
 ### Specifications
 
-1. Clone this repository: https://github.com/QuietEvolver/AnimalShelter20.Solution.git
+1. Clone this repository: https://github.com/QuietEvolver/BestRestaurant20.Solution.git
 2. Open the command line--and navigate into the repository.
 3. On your browser, open the index.html and enjoy!
 
@@ -90,9 +90,9 @@ List animals starting with the ones who have been in the shelter the longest.
 ### Support and Contact details
 | Author | GitHub | Email |
 |--------|:------:|:-----:|
-| Vera Weikel| [quietevolver](https://github.com/quietevolver) |  [quiet.evolver@gmail.com](mailto:quietevolver@gmail.com)
+| Vera Weikel | [quietevolver](https://github.com/quietevolver) |  [quiet.evolver@gmail.com](mailto:quietevolver@gmail.com)
 
-Anthony Golovin| [agolovin](https://github.com/agolovin) |  [AGOLOVIN97@live.com](mailto:AGOLOVIN97@live.com)
+| Wei Dai | [weidai07](https://github.com/agolovin) |  [weidai07@gmail.com](mailto:weidai07@gmail.com)
 _Please contact with questions and/or comments._
 
 
@@ -100,15 +100,15 @@ _Please contact with questions and/or comments._
 
 The full documentation for [GH-Pages](https://github.blog/2016-08-22-publish-your-project-documentation-with-github-pages/)
 
-The source for the application: AnimalShelter20 documentation and website is hosted on a separate repo: [**quietevolver**][repo-website]. The deployed version is at [**quietevolver**](https://quietevolver.github.io/AnimalShelter20.Solution/).
+The source for the application: BestRestaurant20 documentation and website is hosted on a separate repo: [**quietevolver**][repo-website]. The deployed version is at [**quietevolver**](https://quietevolver.github.io/BestRestaurant20.Solution/).
 
-[docs]: https://github.com/QuietEvolver/AnimalShelter20.Solution.git
-[repo-website]: https://github.com/QuietEvolver/AnimalShelter20.Solution.git
+[docs]: https://github.com/QuietEvolver/BestRestaurant20.Solution.git
+[repo-website]: https://github.com/QuietEvolver/BestRestaurant20.Solution.git
 
 
 ### License
 
 *This software is licensed under the MIT license*
 
-Copyright (c) 2020 **Vera Weikel and Anthony Golovin**
+Copyright (c) 2020 **Vera Weikel and Wei Dai**
 
