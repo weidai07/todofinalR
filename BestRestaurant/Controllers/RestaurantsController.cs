@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using BestRestaurant.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace BestRestaurant.Controllers
 {
@@ -36,6 +37,22 @@ namespace BestRestaurant.Controllers
     {
     Restaurant thisRestaurant= _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
     return View(thisRestaurant);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      //Console.WriteLine("id" + id);
+        var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+        //Console.WriteLine("thisRestaurant" + id);
+        return View(thisRestaurant);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Restaurant restaurant)
+    {
+        _db.Entry(restaurant).State = EntityState.Modified;
+        _db.SaveChanges();
+        return RedirectToAction("Index");
     }
   }
 }
