@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `foodcuisines`
+--
+
+DROP TABLE IF EXISTS `foodcuisines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `foodcuisines` (
+  `FoodCuisineId` int(11) NOT NULL AUTO_INCREMENT,
+  `CuisineType` varchar(255) DEFAULT NULL,
+  `FoodCuisineName` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`FoodCuisineId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `foodcuisines`
+--
+
+LOCK TABLES `foodcuisines` WRITE;
+/*!40000 ALTER TABLE `foodcuisines` DISABLE KEYS */;
+/*!40000 ALTER TABLE `foodcuisines` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `restaurants`
 --
 
@@ -24,12 +48,13 @@ DROP TABLE IF EXISTS `restaurants`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `restaurants` (
   `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
+  `FoodCuisineId` varchar(255) DEFAULT NULL,
+  `CategoryType` varchar(255) DEFAULT NULL,
   `RestaurantName` varchar(45) DEFAULT NULL,
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
   PRIMARY KEY (`RestaurantId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +63,7 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
+INSERT INTO `restaurants` VALUES (1,'Spanishabc',NULL,NULL,0),(3,'Senegali',NULL,NULL,0);
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-15 13:20:19
+-- Dump completed on 2020-01-15 16:31:38

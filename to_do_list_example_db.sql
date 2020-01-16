@@ -46,6 +46,55 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES 
+
+
+
+
+CREATE TABLE restaurants (
+  RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+  
+  CuisineType varchar(255) DEFAULT NULL,
+  RestaurantName varchar(45) DEFAULT NULL,
+  Address varchar(45) DEFAULT NULL,
+  Phone int (45) DEFAULT NULL,
+  PRIMARY KEY (RestaurantId),
+  FOREIGN KEY (FoodCuisineId) REFERENCES  FoodCuisineId FOREIGN KEY (FoodCuisineId) 
+);
+DROP TABLE IF EXISTS `restaurants`;
+CREATE TABLE `restaurants` (
+  `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
+  `CuisineType` varchar(255) DEFAULT NULL,
+  `RestaurantName` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `Phone` int(45) DEFAULT NULL,
+  PRIMARY KEY (`RestaurantId`)
+) 
+
+
+DROP TABLE IF EXISTS restaurants;
+CREATE TABLE restaurants (
+    RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+    CuisineType varchar(255) DEFAULT NULL,
+    RestaurantName varchar(45) DEFAULT NULL,
+    Address varchar(45) DEFAULT NULL,
+    Phone int (45) DEFAULT NULL,
+    FoodCuisineId int(11),
+    PRIMARY KEY (RestaurantId),
+    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
+);
+FK-works
+DROP TABLE IF EXISTS restaurants;
+CREATE TABLE restaurants (
+    RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+    CuisineType varchar(255) DEFAULT NULL,
+    RestaurantName varchar(45) DEFAULT NULL,
+    Address varchar(45) DEFAULT NULL,
+    Phone int (45) DEFAULT NULL,
+    FoodCuisineId int(11),
+    PRIMARY KEY (RestaurantId),
+    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
+);
+*/;
 
 -- Dump completed on 2020-01-14  9:35:34

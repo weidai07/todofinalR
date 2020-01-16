@@ -19,10 +19,10 @@
 -- Table structure for table `foodcuisines`
 --
 
-DROP TABLE IF EXISTS `foodcuisines`;
+DROP TABLE IF EXISTS `foodCuisines`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `foodcuisines` (
+SET character_set_client = utf8mb4 ;
+CREATE TABLE `foodCuisines` (
   `FoodCuisineId` int(11) NOT NULL AUTO_INCREMENT,
   `CuisineType` varchar(255) DEFAULT NULL,
   `FoodCuisineName` varchar(45) DEFAULT NULL,
@@ -76,3 +76,32 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2020-01-15 16:31:38
+
+
+CREATE TABLE restaurants (
+  RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+  
+  CuisineType varchar(255) DEFAULT NULL,
+  RestaurantName varchar(45) DEFAULT NULL,
+  Address varchar(45) DEFAULT NULL,
+  Phone int (45) DEFAULT NULL,
+  PRIMARY KEY (RestaurantId),
+  FOREIGN KEY (FoodCuisineId) REFERENCES  FoodCuisineId FOREIGN KEY (FoodCuisineId) 
+);
+DROP TABLE IF EXISTS `restaurants`;
+CREATE TABLE `restaurants` (
+  `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
+  `CuisineType` varchar(255) DEFAULT NULL,
+  `RestaurantName` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `Phone` int(45) DEFAULT NULL,
+  PRIMARY KEY (`RestaurantId`)
+) 
+
+CREATE TABLE Restaurants (
+    RestaurantId int NOT NULL AUTO_INCREMENT,
+    RestaurantNumber int NOT NULL,
+    FoodCuisineId int,
+    PRIMARY KEY (RestaurantId),
+    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
+);

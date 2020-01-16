@@ -4,6 +4,7 @@ using BestRestaurant.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering; //NLn.
 
 namespace BestRestaurant.Controllers
 {
@@ -18,7 +19,7 @@ namespace BestRestaurant.Controllers
 
     public ActionResult Index()
     {
-      List<Restaurant> model = _db.Restaurants.ToList();
+      List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.FoodCuisine).ToList();
       return View(model);
     }
     public ActionResult Create()
