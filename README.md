@@ -18,7 +18,7 @@
     <img src="https://avatars2.githubusercontent.com/u/55602501?s=460&v=4" width=100px alt="quietevolver" />
   </a>
   <a href="https://github.com/weidai07/todofinalR.Solution.git">
-    <img src="https://avatars1.githubusercontent.com/u/53847662?s=400&v=4" width=100px alt="agolovin" />
+    <img src="https://avatars1.githubusercontent.com/u/53847662?s=400&v=4" width=100px alt="weidai07" />
   </a>
   <a href="https://github.blog/2016-08-22-publish-your-project-documentation-with-github-pages/">
     <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png" width=100px alt="gh-pages" />
@@ -40,7 +40,7 @@
 
 #### A website for an Animal Shelter.
 
-#### By **Vera Weikel and Anthony Golovin
+#### By **Vera Weikel and Wei Dai
 ## 🎉 Contents
 
 - [Description](#-description)
@@ -92,7 +92,7 @@ List animals starting with the ones who have been in the shelter the longest.
 |--------|:------:|:-----:|
 | Vera Weikel | [quietevolver](https://github.com/quietevolver) |  [quiet.evolver@gmail.com](mailto:quietevolver@gmail.com)
 
-| Wei Dai | [weidai07](https://github.com/agolovin) |  [weidai07@gmail.com](mailto:weidai07@gmail.com)
+| Wei Dai | [weidai07](https://github.com/weidai07) |  [wei_d523@yahoo.com](mailto:wei_d523@yahoo.com)
 _Please contact with questions and/or comments._
 
 
