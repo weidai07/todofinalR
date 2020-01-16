@@ -207,4 +207,111 @@ CREATE TABLE restaurants (
     FoodCuisineId int(11),
     PRIMARY KEY (RestaurantId),
     FOREIGN KEY (FoodCuisineId) REFERENCES foodCuisines(FoodCuisineId)
-);*/
+);
+DROP DATABASE IF EXISTS best_restaurant_db;
+CREATE DATABASE best_restaurant_db;
+USE best_restaurant_db;
+
+DROP TABLE IF EXISTS foodcuisines;
+CREATE TABLE foodcuisines (
+  FoodCuisineId int PRIMARY KEY  NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  FoodCuisineName varchar(45) DEFAULT NULL,
+  RestaurantId int(11) NOT NULL,
+  FOREIGN KEY (ResturantId) REFERENCES restaurants(ResturantId)
+);
+
+CREATE TABLE restaurants (
+  RestaurantId int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  RestaurantName varchar(45) DEFAULT NULL,
+  Address varchar(45) DEFAULT NULL,
+  Phone int (45) DEFAULT NULL,
+  FoodCuisineId int(11) NOT NULL,
+  FOREIGN KEY (FoodCuisineId) REFERENCES foodcuisine(FoodCuisineId) 
+);
+PM POST MAE PHIM****************DOESNT' READ FK
+DROP DATABASE IF EXISTS best_restaurant_db;
+CREATE DATABASE best_restaurant_db;
+USE best_restaurant_db;
+
+DROP TABLE IF EXISTS foodcuisines;
+CREATE TABLE foodcuisines (
+  FoodCuisineId int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  FoodCuisineName varchar(45) DEFAULT NULL,
+  RestaurantId int(11) NOT NULL
+);
+
+CREATE TABLE restaurants (
+  RestaurantId int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  RestaurantName varchar(45) DEFAULT NULL,
+  Address varchar(45) DEFAULT NULL,
+  Phone int (45) DEFAULT NULL,
+  FoodCuisineId int(11) NOT NULL
+);
+
+
+CREATE TABLE restaurants_foodcuisines_join
+(
+  RestaurantId int,
+  FoodCuisineId int,
+  CONSTRAINT RestaurantFoodCuisinesId PRIMARY KEY (RestaurantId, FoodCuisineId),
+  CONSTRAINT FK_restaurants 
+      FOREIGN KEY (RestaurantId) REFERENCES restaurants (RestaurantId),
+  CONSTRAINT FK_foodcuisines 
+      FOREIGN KEY (FoodCuisinesId) REFERENCES foodcuisines (FoodCuisineId)
+);
+
+
+SELECT * FROM restaurants RestaurantId
+INNER JOIN foodcuisines FoodCuisineId ON restaurants.FoodCuisineId = restaurants.FoodCuisineId
+ORDER BY RestaurantName DESC;
+
+JANUARY 15, 2020
+
+:::FIRST BUILD TABLE STRUCTURE (PK ONLY)
+
+DROP DATABASE IF EXISTS best_restaurant_db;
+CREATE DATABASE best_restaurant_db;
+USE best_restaurant_db;
+
+DROP TABLE IF EXISTS foodcuisines;
+CREATE TABLE foodcuisines (
+  FoodCuisineId int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  FoodCuisineName varchar(45) DEFAULT NULL,
+  RestaurantId int(11) NOT NULL
+);
+
+DROP TABLE IF EXISTS restaurants;
+CREATE TABLE restaurants (
+  RestaurantId int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  RestaurantName varchar(45) DEFAULT NULL,
+  Address varchar(45) DEFAULT NULL,
+  Phone int (45) DEFAULT NULL,
+  FoodCuisineId int(11) NOT NULL
+);
+
+::;;;:MANY TO MANY:::;;;
+
+(((INNERJOINS)))
+
+CREATE TABLE restaurants_foodcuisines_join
+(
+  RestaurantId int,
+  FoodCuisineId int,
+  CONSTRAINT RestaurantFoodCuisinesId PRIMARY KEY (RestaurantId, FoodCuisineId),
+  CONSTRAINT FK_restaurants 
+      FOREIGN KEY (RestaurantId) REFERENCES restaurants (RestaurantId),
+  CONSTRAINT FK_foodcuisines 
+      FOREIGN KEY (FoodCuisinesId) REFERENCES foodcuisines (FoodCuisineId)
+);
+
+
+SELECT * FROM restaurants RestaurantId
+INNER JOIN foodcuisines FoodCuisineId ON restaurants.FoodCuisineId = restaurants.FoodCuisineId
+ORDER BY RestaurantName DESC;
+*/

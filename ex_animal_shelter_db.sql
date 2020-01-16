@@ -68,7 +68,44 @@ LOCK TABLES `new_table` WRITE;
 /*!40000 ALTER TABLE `new_table` DISABLE KEYS */;
 /*!40000 ALTER TABLE `new_table` ENABLE KEYS */;
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE 
+
+
+DROP TABLE IF EXISTS `restaurants`;
+CREATE TABLE `restaurants` (
+  `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
+  `CuisineType` varchar(255) DEFAULT NULL,
+  `RestaurantName` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `Phone` int(45) DEFAULT NULL,
+  PRIMARY KEY (`RestaurantId`)
+) 
+
+
+DROP TABLE IF EXISTS restaurants;
+CREATE TABLE restaurants (
+    RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+    CuisineType varchar(255) DEFAULT NULL,
+    RestaurantName varchar(45) DEFAULT NULL,
+    Address varchar(45) DEFAULT NULL,
+    Phone int (45) DEFAULT NULL,
+    FoodCuisineId int(11),
+    PRIMARY KEY (RestaurantId),
+    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
+);
+FK-works
+DROP TABLE IF EXISTS restaurants;
+CREATE TABLE restaurants (
+    RestaurantId int(11) NOT NULL AUTO_INCREMENT,
+    CuisineType varchar(255) DEFAULT NULL,
+    RestaurantName varchar(45) DEFAULT NULL,
+    Address varchar(45) DEFAULT NULL,
+    Phone int (45) DEFAULT NULL,
+    FoodCuisineId int(11),
+    PRIMARY KEY (RestaurantId),
+    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
+);
+*/;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

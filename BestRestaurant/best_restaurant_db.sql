@@ -53,11 +53,9 @@ CREATE TABLE `restaurants` (
   `RestaurantName` varchar(45) DEFAULT NULL,
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
-  `FoodCuisineId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`RestaurantId`),
-  KEY `FoodCuisineId` (`FoodCuisineId`),
-  CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`FoodCuisineId`) REFERENCES `foodcuisines` (`FoodCuisineId`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `FoodCuisineId` int(11) NOT NULL,
+  PRIMARY KEY (`RestaurantId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-15 19:17:49
+-- Dump completed on 2020-01-15 21:47:36
