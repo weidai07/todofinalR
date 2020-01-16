@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.16, for macos10.14 (x86_64)
 --
--- Host: localhost    Database: new_best_restaurant_db
+-- Host: localhost    Database: best_restaurant_db
 -- ------------------------------------------------------
 -- Server version	8.0.16
 
@@ -54,9 +54,7 @@ CREATE TABLE `restaurants` (
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
   `FoodCuisineId` int(11) NOT NULL,
-  PRIMARY KEY (`RestaurantId`),
-  KEY `FoodCuisineId` (`FoodCuisineId`),
-  CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`FoodCuisineId`) REFERENCES `foodcuisines` (`FoodCuisineId`)
+  PRIMARY KEY (`RestaurantId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -78,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-16 10:24:04
+-- Dump completed on 2020-01-15 21:47:36

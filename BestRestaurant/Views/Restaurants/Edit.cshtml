@@ -15,6 +15,11 @@
     @Html.LabelFor(model => model.CuisineType)
     @Html.EditorFor(model => model.CuisineType)
 
+    @Html.LabelFor(model => model.FoodCuisine)
+    @Html.DropDownList("FoodCuisineId")
+
     <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to restaurant list", "Index")</p>
+
+

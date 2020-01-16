@@ -24,14 +24,15 @@ namespace BestRestaurant.Controllers
     }
     public ActionResult Create()
     {
-    return View();
+        ViewBag.FoodCuisineId = new SelectList(_db.FoodCuisines, "FoodCuisineId", "FoodCuisineName");
+      return View();
     }
 
     [HttpPost]
     public ActionResult Create(Restaurant restaurant)
     {
       _db.Restaurants.Add(restaurant);
-      _db.SaveChanges();
+      _db.SaveChanges();    
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)
@@ -44,6 +45,7 @@ namespace BestRestaurant.Controllers
     {
       //Console.WriteLine("id" + id);
         var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+        ViewBag.FoodCuisineId = new SelectList(_db.FoodCuisines, "FoodCuisineId", "Name");
         //Console.WriteLine("thisRestaurant" + id);
         return View(thisRestaurant);
     }

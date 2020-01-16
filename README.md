@@ -17,7 +17,7 @@
   <a href="https://github.com/quietevolver/BestRestaurant20.Solution.git">
     <img src="https://avatars2.githubusercontent.com/u/55602501?s=460&v=4" width=100px alt="quietevolver" />
   </a>
-  <a href="https://github.com/weidai07/todofinalR.Solution.git">
+  <a href="https://github.com/weidai07/todofinalR.git">
     <img src="https://avatars1.githubusercontent.com/u/53847662?s=400&v=4" width=100px alt="weidai07" />
   </a>
   <a href="https://github.blog/2016-08-22-publish-your-project-documentation-with-github-pages/">
