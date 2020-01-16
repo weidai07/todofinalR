@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `foodcuisines`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `foodcuisines` (
   `FoodCuisineId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
+  `FoodCuisineType` varchar(255) DEFAULT NULL,
   `FoodCuisineName` varchar(45) DEFAULT NULL,
   `RestaurantId` int(11) NOT NULL,
   PRIMARY KEY (`FoodCuisineId`)
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `restaurants`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `restaurants` (
   `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
+  `RestaurantCuisineType` varchar(255) DEFAULT NULL,
   `RestaurantName` varchar(45) DEFAULT NULL,
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
@@ -78,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-16 10:24:04
+-- Dump completed on 2020-01-16 11:11:12

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.16, for macos10.14 (x86_64)
 --
--- Host: localhost    Database: best_restaurant_db
+-- Host: localhost    Database: new_best_restaurant_db
 -- ------------------------------------------------------
 -- Server version	8.0.16
 
@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `foodcuisines`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `foodcuisines` (
   `FoodCuisineId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
+  `FoodCuisineType` varchar(255) DEFAULT NULL,
   `FoodCuisineName` varchar(45) DEFAULT NULL,
   `RestaurantId` int(11) NOT NULL,
   PRIMARY KEY (`FoodCuisineId`)
@@ -49,12 +49,14 @@ DROP TABLE IF EXISTS `restaurants`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `restaurants` (
   `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
+  `RestaurantCuisineType` varchar(255) DEFAULT NULL,
   `RestaurantName` varchar(45) DEFAULT NULL,
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
   `FoodCuisineId` int(11) NOT NULL,
-  PRIMARY KEY (`RestaurantId`)
+  PRIMARY KEY (`RestaurantId`),
+  KEY `FoodCuisineId` (`FoodCuisineId`),
+  CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`FoodCuisineId`) REFERENCES `foodcuisines` (`FoodCuisineId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -76,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-15 21:47:36
+-- Dump completed on 2020-01-16 11:10:43
