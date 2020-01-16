@@ -125,6 +125,16 @@ CREATE TABLE restaurants (
     PRIMARY KEY (RestaurantId),
     FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
 );
+
+DROP TABLE IF EXISTS foodcuisines;
+CREATE TABLE foodCuisines (
+  FoodCuisineId int(11) NOT NULL AUTO_INCREMENT,
+  CuisineType varchar(255) DEFAULT NULL,
+  FoodCuisineName varchar(45) DEFAULT NULL,
+  PRIMARY KEY (FoodCuisineId)
+);
+
+ALTER TABLE foodcuisines RENAME TO foodCuisines;
 */;
 
 -- Dump completed on 2020-01-14 11:49:25

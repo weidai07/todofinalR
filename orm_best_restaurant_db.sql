@@ -19,13 +19,14 @@
 -- Table structure for table `foodcuisines`
 --
 
-DROP TABLE IF EXISTS `foodCuisines`;
+DROP TABLE IF EXISTS `foodcuisines`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-SET character_set_client = utf8mb4 ;
-CREATE TABLE `foodCuisines` (
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `foodcuisines` (
   `FoodCuisineId` int(11) NOT NULL AUTO_INCREMENT,
   `CuisineType` varchar(255) DEFAULT NULL,
   `FoodCuisineName` varchar(45) DEFAULT NULL,
+  `RestaurantId` int(11) NOT NULL,
   PRIMARY KEY (`FoodCuisineId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,8 +53,11 @@ CREATE TABLE `restaurants` (
   `RestaurantName` varchar(45) DEFAULT NULL,
   `Address` varchar(45) DEFAULT NULL,
   `Phone` int(45) DEFAULT NULL,
-  PRIMARY KEY (`RestaurantId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `FoodCuisineId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`RestaurantId`),
+  KEY `FoodCuisineId` (`FoodCuisineId`),
+  CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`FoodCuisineId`) REFERENCES `foodcuisines` (`FoodCuisineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +66,6 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
-INSERT INTO `restaurants` VALUES (1,'Spanishabc',NULL,NULL,0),(3,'Senegali',NULL,NULL,0);
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,33 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-15 16:31:38
-
-
-CREATE TABLE restaurants (
-  RestaurantId int(11) NOT NULL AUTO_INCREMENT,
-  
-  CuisineType varchar(255) DEFAULT NULL,
-  RestaurantName varchar(45) DEFAULT NULL,
-  Address varchar(45) DEFAULT NULL,
-  Phone int (45) DEFAULT NULL,
-  PRIMARY KEY (RestaurantId),
-  FOREIGN KEY (FoodCuisineId) REFERENCES  FoodCuisineId FOREIGN KEY (FoodCuisineId) 
-);
-DROP TABLE IF EXISTS `restaurants`;
-CREATE TABLE `restaurants` (
-  `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
-  `CuisineType` varchar(255) DEFAULT NULL,
-  `RestaurantName` varchar(45) DEFAULT NULL,
-  `Address` varchar(45) DEFAULT NULL,
-  `Phone` int(45) DEFAULT NULL,
-  PRIMARY KEY (`RestaurantId`)
-) 
-
-CREATE TABLE Restaurants (
-    RestaurantId int NOT NULL AUTO_INCREMENT,
-    RestaurantNumber int NOT NULL,
-    FoodCuisineId int,
-    PRIMARY KEY (RestaurantId),
-    FOREIGN KEY (FoodCuisineId) REFERENCES FoodCuisines(FoodCuisineId)
-);
+-- Dump completed on 2020-01-15 19:17:49
